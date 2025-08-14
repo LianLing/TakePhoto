@@ -9,7 +9,7 @@ using System.Text.Json.Serialization;
 
 
 
-namespace HanSongApp.Services
+namespace TakePhoto.Services
 {
     public class ApiService
     {

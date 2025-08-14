@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace HanSongApp
+namespace TakePhoto
 {
     [Application]
     public class MainApplication : MauiApplication

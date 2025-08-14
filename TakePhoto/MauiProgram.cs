@@ -1,12 +1,12 @@
 ﻿using CommunityToolkit.Maui;
-using HanSongApp.DataBase;
-using HanSongApp.Services;
+using TakePhoto.DataBase;  
+using TakePhoto.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.LifecycleEvents;
 using TakePhoto;
 
-namespace HanSongApp
+namespace TakePhoto
 {
     public static class MauiProgram
     {

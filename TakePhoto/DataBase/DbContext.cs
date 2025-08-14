@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using SqlSugar;
 
-namespace HanSongApp.DataBase
+namespace TakePhoto.DataBase
 {
     public class DbContext : IDisposable
     {

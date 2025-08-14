@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace HanSongApp
+namespace TakePhoto
 {
     public class Program
     {

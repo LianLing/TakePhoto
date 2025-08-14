@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace HanSongApp
+namespace TakePhoto
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate
