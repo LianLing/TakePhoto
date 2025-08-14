@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TakePhoto.UploadImages"
+             Title="扫码">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Entry 
+            x:Name="ScanResultEntry" 
+            Placeholder="点击按钮扫码" 
+            IsReadOnly="True"
+            HeightRequest="50"
+            FontSize="16"
+            HorizontalOptions="FillAndExpand"/>
+
+        <Button 
+            x:Name="ScanButton" 
+            Text="扫码" 
+            Clicked="OnScanButtonClicked"
+            HeightRequest="50"
+            FontSize="16"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="{StaticResource Primary}"
+            TextColor="White"/>
+    </VerticalStackLayout>
+
+</ContentPage>

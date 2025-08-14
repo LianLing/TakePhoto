@@ -1,11 +1,12 @@
 ﻿using CommunityToolkit.Maui;
-using TakePhoto.DataBase;  
-using TakePhoto.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.LifecycleEvents;
 using TakePhoto;
+using TakePhoto.DataBase;  
+using TakePhoto.Services;
 using TakePhoto.Views;
+using ZXing.Net.Maui.Controls;
 
 namespace TakePhoto
 {
@@ -17,6 +18,7 @@ namespace TakePhoto
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseBarcodeReader()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -55,6 +57,7 @@ namespace TakePhoto
             // 注册所有页面
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<SelectConditionPage>();
+            builder.Services.AddTransient<UploadImages>();
 
             return builder.Build();
         }

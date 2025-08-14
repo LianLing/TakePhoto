@@ -18,15 +18,6 @@ namespace TakePhoto
                 SetSystemProperty("proxyPort", "false");
             }
 
-            //try
-            //{
-            //    var policyType = Type.GetType("Android.Net.NetworkSecurityPolicy, Mono.Android");
-            //    var policy = policyType?.GetProperty("Instance")?.GetValue(null);
-            //    var setMethod = policyType?.GetMethod("SetCleartextTrafficPermitted", new[] { typeof(string), typeof(bool) });
-            //    setMethod?.Invoke(policy, new object[] { "10.10.38.158", true });
-            //    setMethod?.Invoke(policy, new object[] { "10.10.38.158:8201", true });
-            //}
-            //catch { /* 忽略 */ }
 
 
             base.OnCreate(savedInstanceState);
