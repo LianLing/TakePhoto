@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TakePhoto.Models.HtsModels;
+﻿using TakePhoto.Models.HtsModels;
 using TakePhoto.Services;
 using ZXing.Net.Maui;
-using ZXing.Net.Maui.Controls;
 
 namespace TakePhoto.Views
 {

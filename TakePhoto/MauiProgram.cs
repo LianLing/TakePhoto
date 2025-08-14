@@ -7,6 +7,7 @@ using TakePhoto.DataBase;
 using TakePhoto.Services;
 using TakePhoto.Views;
 using ZXing.Net.Maui.Controls;
+using ZXing.Net.Maui;
 
 namespace TakePhoto
 {
@@ -26,17 +27,17 @@ namespace TakePhoto
                 })
                 .ConfigureLifecycleEvents(events =>
                 {
-#if ANDROID
+
                     // Android特定生命周期配置
                     events.AddAndroid(android => android
                         .OnCreate((activity, bundle) => ConfigureAndroidSecurity(activity))
                     );
-#endif
-                });
 
-#if DEBUG
+                });
+            builder.UseZXingNetMaui();
+
             builder.Logging.AddDebug();
-#endif
+
 
             // 注册HttpClient服务（带安全配置）
             builder.Services.AddHttpClient("SecureClient", httpClient =>
