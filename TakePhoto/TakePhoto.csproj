@@ -67,6 +67,12 @@
 	  <MauiXaml Update="Resources\Styles\Styles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\SelectConditionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\UploadImages.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<!-- Android网络安全配置 -->
@@ -78,8 +84,6 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 

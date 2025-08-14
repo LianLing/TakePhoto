@@ -1,24 +1,21 @@
-﻿namespace TakePhoto
+﻿using TakePhoto.Views;
+
+namespace TakePhoto
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
-        public MainPage()
+        private readonly IServiceProvider _serviceProvider;
+        public MainPage(IServiceProvider serviceProvider)
         {
             InitializeComponent();
+            _serviceProvider = serviceProvider;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void takePhoto_Clicked(object sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            // 通过依赖注入获取页面
+            var conditionPage = _serviceProvider.GetRequiredService<SelectConditionPage>();
+            await Navigation.PushAsync(conditionPage);
         }
     }
 

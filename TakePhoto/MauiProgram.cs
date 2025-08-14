@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.LifecycleEvents;
 using TakePhoto;
+using TakePhoto.Views;
 
 namespace TakePhoto
 {
@@ -53,6 +54,7 @@ namespace TakePhoto
 
             // 注册所有页面
             builder.Services.AddTransient<MainPage>();
+            builder.Services.AddTransient<SelectConditionPage>();
 
             return builder.Build();
         }
