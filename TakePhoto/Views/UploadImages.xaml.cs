@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using TakePhoto.Models.HtsModels;
 using TakePhoto.Services;
 using ZXing.Net.Maui;
+using ZXing.Net.Maui.Controls;
 
 namespace TakePhoto.Views
 {
-    internal class UploadImages : ContentPage, INotifyPropertyChanged
+    internal class UploadImages : ContentPage
     {
         private readonly ApiService _apiService;
         private ProductInfo _currentFilter;
@@ -22,7 +23,7 @@ namespace TakePhoto.Views
 
         public UploadImages(ApiService apiService)
         {
-            InitializeComponent();
+            initializeComponent();
             _apiService = apiService;
 
             // 绑定数据上下文  
